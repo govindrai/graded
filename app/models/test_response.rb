@@ -1,4 +1,4 @@
-class StudentAnswer < ActiveRecord::Base
+class TestResponse < ActiveRecord::Base
   belongs_to :student
   belongs_to :answer
 end
