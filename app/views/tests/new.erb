@@ -1,0 +1,51 @@
+<h1>Create a new test</h1>
+
+<form action="/tests" method="POST">
+  <label for="">Test Name</label>
+  <input type="text">
+
+  <label for="">Test Type</label>
+  <select>
+    <option selected>Multiple Choice</option>
+  </select>
+
+  <input type="checkbox"> Pass/No Pass?
+
+  <input type="checkbox"> Timed?
+
+  <h2>Questions &amp; Answers</h2>
+  <p>For each question, please specify the question, possible choices, and the correct choice.</p>
+
+  <h3>Presets</h3>
+  My test has <input type="text" name=""> questions
+  <br>
+  Each question has <input type="text" name=""> choices (don't worry if some questions have more or less, you can edit them individually)
+
+
+  <div class="questions">
+    <ol>
+      <li>
+        <div class="question">
+          <input type="text" name="" placeholder="Question Text">
+          <div class="possible-choice">
+            <input type="text" name="" placeholder="Answer Text">
+            <button>-</button><button>correct choice</button>
+          </div>
+          <button>+ Add another choice</button>
+        </div>
+      </li>
+      <li>
+        <div class="question">
+          <input type="text" name="" placeholder="Question Text">
+          <div class="possible-choice">
+            <input type="text" name="" placeholder="Answer Text">
+            <button>-</button><button>correct choice</button>
+          </div>
+          <button>+ Add another choice</button>
+        </div>
+      </li>
+    </ol>
+    <button>Add another question</button>
+  </div>
+  <input type="submit" value="Create Test">
+</form>

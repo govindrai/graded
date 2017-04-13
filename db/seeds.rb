@@ -92,6 +92,15 @@ User.create!(
   user_type: 'Teacher'
 )
 
+User.create!(
+  first_name:"Josh",
+  last_name:"Morales",
+  email:"johnmorales@dhs.net",
+  password_hash:"123456",
+  institution:"Dublin High School",
+  user_type:"Student"
+)
+
 Course.create!(
   course_name: 'Geometry',
   teacher: User.third
@@ -111,3 +120,11 @@ CourseEnrollment.create!(
   student: User.second,
   course: Course.first
 )
+
+CourseEnrollment.create!(
+  student: User.fourth,
+  course: Course.second
+)
+# Test.create!(
+
+# )
