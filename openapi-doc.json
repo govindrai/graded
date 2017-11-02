@@ -1,1 +1,54 @@
-{"info":{"title":"OTF API","description":"The API for OTF","version":"1.0.0"},"openapi":"3.0.0"}
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "OTF API",
+    "description": "The API for OTF",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/transactions": {
+      "get": {
+        "summary": "List Transactions",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Transaction"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {},
+      "post": {},
+      "delete": {},
+      "patch": {}
+    }
+  },
+  "components": {
+    "schemas": {
+      "Transaction": {
+        "title": "Root Type for Transaction",
+        "description": "The root of the Transaction type's schema.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "purpose": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
